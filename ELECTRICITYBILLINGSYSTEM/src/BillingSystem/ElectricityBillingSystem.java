@@ -54,7 +54,6 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -74,8 +73,9 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -86,6 +86,9 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        Exit = new javax.swing.JButton();
+        Exit1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -314,7 +317,7 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         jTextField5.setEditable(false);
         jTextField5.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("5601255");
+        jTextField5.setText("BILL5601255");
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -344,12 +347,6 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         });
         jPanel2.add(jTextField3);
         jTextField3.setBounds(190, 140, 110, 30);
-
-        jTextField4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setText("0");
-        jPanel2.add(jTextField4);
-        jTextField4.setBounds(190, 210, 110, 30);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -492,23 +489,31 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         jCheckBox1.setBounds(20, 140, 160, 30);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jLabel1.setText("Select No between 20 to 400");
+        jLabel1.setText("Select No between 1 Kw to 150 Kw");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(90, 240, 170, 20);
+        jLabel1.setBounds(90, 240, 180, 20);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel6.setText("Select No between 30 to 200");
         jPanel2.add(jLabel6);
         jLabel6.setBounds(90, 170, 180, 20);
 
+        jTextField4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField4.setText("0");
+        jPanel2.add(jTextField4);
+        jTextField4.setBounds(190, 210, 60, 30);
+
+        jLabel15.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("KW");
+        jPanel2.add(jLabel15);
+        jLabel15.setBounds(250, 210, 50, 30);
+
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(370, 110, 910, 370);
+        jPanel2.setBounds(360, 110, 910, 370);
         getContentPane().add(jPanel4);
         jPanel4.setBounds(0, 0, 10, 10);
-
-        jPanel5.setPreferredSize(new java.awt.Dimension(50, 70));
-        getContentPane().add(jPanel5);
-        jPanel5.setBounds(50, 450, 50, 70);
         getContentPane().add(jPanel6);
         jPanel6.setBounds(0, 0, 10, 10);
 
@@ -587,6 +592,36 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         });
         jPanel7.add(jButton2);
         jButton2.setBounds(760, 10, 310, 50);
+
+        Exit.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        Exit.setText("Exit");
+        Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Exit);
+        Exit.setBounds(420, 230, 100, 40);
+
+        Exit1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        Exit1.setText("Exit");
+        Exit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Exit1ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Exit1);
+        Exit1.setBounds(420, 230, 100, 40);
+
+        jButton3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jButton3.setText("EXIT");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton3);
+        jButton3.setBounds(1110, 40, 100, 60);
 
         getContentPane().add(jPanel7);
         jPanel7.setBounds(20, 490, 1250, 130);
@@ -765,8 +800,8 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        if((jCheckBox1.isSelected()) || (jCheckBox2.isSelected()))
        {
-           double M = Double.parseDouble(jTextField3.getText()) * 20;
-           double C = Double.parseDouble(jTextField4.getText()) * 10;
+           double M = Double.parseDouble(jTextField3.getText()) * 30;
+           double C = Double.parseDouble(jTextField4.getText()) * 30;
            
            double total = M + C;
            double Cf = total * 5 / 100;
@@ -870,6 +905,18 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
 
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitActionPerformed
+
+    private void Exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_Exit1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -906,6 +953,8 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Exit;
+    private javax.swing.JButton Exit1;
     private javax.swing.JButton b0;
     private javax.swing.JButton b1;
     private javax.swing.JButton b2;
@@ -926,6 +975,7 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
     private javax.swing.JButton bsub;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
@@ -934,6 +984,7 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -946,7 +997,6 @@ public class ElectricityBillingSystem extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTextField jTextField1;
